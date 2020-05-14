@@ -1,0 +1,7 @@
+.error-message {
+  box-sizing: content-box;
+  height: 1rem;
+  padding-top: 0.5rem;
+
+  color: #BF2600;
+}

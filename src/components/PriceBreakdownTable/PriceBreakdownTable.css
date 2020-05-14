@@ -1,0 +1,28 @@
+.price-breakdown-table {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.price-breakdown-table_row {
+  text-align: left;
+}
+
+.price-breakdown-table_row-details {
+  display: grid;
+  grid-template-columns: 80% auto;
+}
+
+.price-breakdown-table_row-list,
+.price-breakdown-table_row-details {
+  margin: 0.5rem 0;
+}
+
+.price-breakdown-table_row-details :nth-child(2) {
+  justify-self: flex-end;
+}
+
+.price-breakdown-table_total-price {
+  align-self: center;
+}

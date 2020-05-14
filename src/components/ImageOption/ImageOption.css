@@ -1,0 +1,40 @@
+.image-option {
+  height: calc(100px + 2.25rem);
+  width: calc(100px + 2.25rem);
+  padding: 1rem;
+  box-sizing: content-box;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #EBECF0;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.image-option_image-wrapper {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-option_image-wrapper img {
+  height: 100px;
+}
+
+.image-option_label {
+  margin-top: 0.25rem;
+}
+
+.image-option.selected {
+  background-color: #DE350B;
+  color: #FFFFFF;
+  font-weight: 500;
+}

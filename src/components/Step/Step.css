@@ -1,0 +1,21 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step_title {
+  font-size: 1.5rem;
+  color: #DE350B;
+  margin: 1rem 0;
+}
+
+.step_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 1rem 0;
+  min-height: 200px;
+}
