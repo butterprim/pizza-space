@@ -1,6 +1,7 @@
 .app {
   display: flex;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .app .header {
@@ -28,4 +29,24 @@
   font-weight: 400;
   display: inline-block;
   margin: 0.25rem;
+}
+
+.app .footer {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  padding: 1rem;
+
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.app .footer_resources {
+  font-size: 0.75rem;
+  text-align: right;
+  color: #B3BAC5;
 }

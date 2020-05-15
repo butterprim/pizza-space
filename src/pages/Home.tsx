@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../../components/Button/Button';
-import './Home.css';
-import { PizzaContext } from '../../store/PizzaStore';
+import { Button } from '../components/Button/Button';
+import { PizzaContext } from '../store/PizzaStore';
+import { Page } from '../components/Page/Page';
 
 export const Home: FunctionComponent<any> = () => {
   // eslint-disable-next-line
@@ -13,11 +13,10 @@ export const Home: FunctionComponent<any> = () => {
   }
 
   return (
-    <div className="home">
-      <p className="home_description">Want to start crafting your own pizza?</p>
+    <Page title="Want to start crafting your own pizza?">
       <Link to="/order">
         <Button buttonType="primary" onClick={() => handleStart()}>Start</Button>
       </Link>
-    </div>
+    </Page>
   );
 };

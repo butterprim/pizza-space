@@ -1,0 +1,21 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+.page_content {
+  padding: 1rem 0;
+}
+
+.page_loading {
+  display: flex;
+  align-items: center;
+  height: 200px;
+}

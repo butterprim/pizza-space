@@ -1,3 +1,15 @@
-.button-group .button:not(:first-child) {
+.button-group > :not(:first-child) {
   margin-left: 1rem;
+}
+
+.button-group.align-center {
+  text-align: center;
+}
+
+.button-group.align-left {
+  text-align: left;
+}
+
+.button-group.align-right {
+  text-align: right;
 }

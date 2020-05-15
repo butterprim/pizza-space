@@ -1,5 +1,5 @@
 import React, { Context, FunctionComponent, useReducer } from 'react';
-import { Pizza } from '../types/types';
+import { Pizza } from '../types/pizza';
 
 const defaultPizza: Pizza = {
   size: 'Small',

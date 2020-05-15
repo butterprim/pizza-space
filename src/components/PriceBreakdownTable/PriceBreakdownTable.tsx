@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import './PriceBreakdownTable.css';
-import { Pizza } from '../../types/types';
+import { Pizza } from '../../types/pizza';
 import { SIZE_PRICES, CRUST_PRICES, MAX_TOPPINGS, ADDITIONAL_TOPPINGS_PRICE } from '../../constants/prices';
 
 type PriceBreakdownTableProps = {

@@ -1,32 +1,38 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
-import { OrderCorner } from './containers/OrderCorner';
-import { Home } from './containers/Home/Home';
+import { OrderCorner } from './pages/OrderCorner';
+import { Home } from './pages/Home';
 import { PizzaStore } from './store/PizzaStore';
+import { OrderReceipt } from './pages/OrderReceipt';
 
 function App() {
-
   return (
     <div className="app">
-        <Router>
-          <Switch>
+      <Router>
+        <Switch>
+          <Fragment>
+            <div className="header">
+              <Link to="/">
+                <h1>Pizza Space</h1>
+              </Link>
+            </div>
             <PizzaStore>
-              <div className="header">
-                <Link to="/">
-                  <h1>Pizza Space</h1>
-                </Link>
-              </div>
               <div className="content">
                 <Route path="/order" component={OrderCorner}/>
-
-                <Route exact path="/">
-                  <Home/>
-                </Route>
+                <Route path="/receipt/:id" component={OrderReceipt}/>
+                <Route exact path="/" component={Home}/>
               </div>
             </PizzaStore>
-          </Switch>
-        </Router>
+          </Fragment>
+        </Switch>
+      </Router>
+      <div className="footer">
+        <div className="footer_resources">
+        <div>Photos taken from <a href="https://unsplash.com/">unsplash.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div>
+        </div>
+      </div>
     </div>
   );
 }

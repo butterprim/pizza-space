@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext, useState } from 'react';
 import { ErrorMessage } from '../components/ErrorMessage/ErrorMessage';
 import { PizzaContext } from '../store/PizzaStore';
-import { SizeOption } from '../types/types';
+import { SizeOption } from '../types/pizza';
 import { TOPPINGS, TOPPINGS_IMAGES } from '../constants/toppings';
 import { CheckboxImageGroup } from '../components/CheckboxImageGroup/CheckboxImageGroup';
 import { ImageOption } from '../components/ImageOption/ImageOption';

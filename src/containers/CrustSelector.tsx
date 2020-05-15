@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext } from 'react';
 import { RadioButtonGroup } from '../components/RadioButtonGroup/RadioButtonGroup';
 import { Button } from '../components/Button/Button';
-import { CrustOption } from '../types/types';
+import { CrustOption } from '../types/pizza';
 import { PizzaContext } from '../store/PizzaStore';
 
 export const CrustSelector: FunctionComponent<any> = () => {

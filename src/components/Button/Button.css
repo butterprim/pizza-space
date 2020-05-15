@@ -22,6 +22,10 @@
   display: inline-flex;
   align-items: center;
 }
+.button.disabled {
+  color: #8993A4;
+  cursor: not-allowed;
+}
 
 .button.secondary {
   background-color: #EBECF0;
@@ -32,6 +36,10 @@
   background-color: #DE350B;
   color: #FFFFFF;
   font-weight: 500;
+}
+.button.disabled.primary {
+  background-color: #FFBDAD;
+  color: #5E6C84;
 }
 
 .button .icon {

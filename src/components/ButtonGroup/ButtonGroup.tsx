@@ -1,8 +1,12 @@
 import React, { FunctionComponent } from 'react';
 import './ButtonGroup.css';
 
-export const ButtonGroup: FunctionComponent<any> = ({ children }) => (
-  <div className="button-group">
+type ButtonGroupProps = {
+  align?: 'center' | 'left' | 'right';
+};
+
+export const ButtonGroup: FunctionComponent<any> = ({ align = 'center', children }) => (
+  <div className={`button-group align-${align}`}>
     {children}
   </div>
 );

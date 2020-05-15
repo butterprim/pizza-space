@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useContext } from 'react';
+import React, { FunctionComponent, useContext, useState } from 'react';
 import { PizzaContext } from '../store/PizzaStore';
 import { PriceBreakdownTable } from '../components/PriceBreakdownTable/PriceBreakdownTable';
 import { Button } from '../components/Button/Button';
@@ -8,6 +8,33 @@ import { Link } from 'react-router-dom';
 export const OrderSummary: FunctionComponent<any> = () => {
   // eslint-disable-next-line
   const [pizza, dispatch] = useContext(PizzaContext);
+  const [pizzaRefId, setPizzaRefId] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handlePlaceOrder = () => {
+    setIsLoading(true);
+    return fetch(`/.netlify/functions/orders-create?q=${JSON.stringify(pizza)}`).then(response => response.json())
+    .then((data) => {
+      setIsLoading(false);
+      setPizzaRefId(data);
+    })
+    .catch((e)=> console.log(e));
+  };
+
+  let getReceiptButton = null;
+  if (pizzaRefId) {
+    getReceiptButton = (
+      <Link to={`/receipt/${pizzaRefId}`}>
+        <Button buttonType="primary">Get receipt</Button>
+      </Link>
+    );
+  }
+  let orderButton = null;
+  if (!pizzaRefId) {
+    orderButton = (
+      <Button buttonType="primary" onClick={handlePlaceOrder} isDisabled={isLoading}>{isLoading ? "Placing order..." : "Place order"}</Button>
+    );
+  }
 
   return (
     <div className="order-summary">
@@ -16,7 +43,8 @@ export const OrderSummary: FunctionComponent<any> = () => {
         <Link to="/">
           <Button buttonType="secondary">Back to home</Button>
         </Link>
-        {/* <Button buttonType="primary">Place order</Button> */}
+        {orderButton}
+        {getReceiptButton}
       </ButtonGroup>
     </div>
   );

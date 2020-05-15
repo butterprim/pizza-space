@@ -1,4 +1,4 @@
-import { SizeOption, CrustOption } from '../types/types';
+import { SizeOption, CrustOption } from '../types/pizza';
 
 export const SIZE_PRICES: Record<SizeOption, number> = {
   'Small': 8,

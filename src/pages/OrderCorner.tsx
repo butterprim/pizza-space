@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
-import { SizeSelector } from './SizeSelector';
-import { CrustSelector } from './CrustSelector';
-import { ToppingSelector } from './ToppingsSelector';
-import { OrderSummary } from './OrderSummary';
+import { SizeSelector } from '../containers/SizeSelector';
+import { CrustSelector } from '../containers/CrustSelector';
+import { ToppingSelector } from '../containers/ToppingsSelector';
+import { OrderSummary } from '../containers/OrderSummary';
 import { Stepper } from '../components/Stepper/Stepper';
 import { Step } from '../components/Step/Step';
 
