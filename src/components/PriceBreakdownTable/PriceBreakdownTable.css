@@ -1,5 +1,5 @@
 .price-breakdown-table {
-  width: 480px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -25,4 +25,10 @@
 
 .price-breakdown-table_total-price {
   align-self: center;
+}
+
+@media screen and (min-width: 426px) {
+  .price-breakdown-table {
+    min-width: 400px;
+  }
 }

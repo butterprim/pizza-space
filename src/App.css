@@ -20,9 +20,7 @@
 
 .app .content {
   box-sizing: border-box;
-  width: 80%;
-  max-width: 1280px;
-  padding: 4rem;
+  padding: 1rem;
 
   align-self: center;
 }
@@ -52,4 +50,12 @@
   font-size: 0.75rem;
   text-align: right;
   color: #B3BAC5;
+}
+
+@media screen and (min-width: 426px) {
+  .app .content {
+    width: 80%;
+    max-width: 1280px;
+    padding: 4rem;
+  }
 }
