@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { FunctionComponent, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import { OrderCorner } from './pages/OrderCorner';
@@ -6,7 +6,7 @@ import { Home } from './pages/Home';
 import { PizzaStore } from './store/PizzaStore';
 import { OrderReceipt } from './pages/OrderReceipt';
 
-function App() {
+const App: FunctionComponent<any> = () => {
   return (
     <div className="app">
       <Router>
